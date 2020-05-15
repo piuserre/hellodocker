@@ -64,6 +64,13 @@
 					<buildArgs>
 						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
+					<archive>
+			          <manifest>
+			            <addClasspath>true</addClasspath>
+			            <classpathPrefix>lib/</classpathPrefix>
+			            <mainClass>com.prove.kube.ProvaKube.ProvaKubeApplication</mainClass>
+			          </manifest>
+			        </archive>
 				</configuration>
 				<executions>
 					<execution>

@@ -1,7 +1,6 @@
-package com.prove.kube.ProvaKube;
+package com.prova.docker;
 
-import java.util.Properties;
-
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,11 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class ProvaController {
 	
 	@GetMapping("/")
-	public String prova() {
+	public ResponseEntity<String> prova() {
 		
-		Properties ps = System.getProperties();
-		
-		return ps.toString();
+		return ResponseEntity.ok("Hi Man");
 	}
 
 }

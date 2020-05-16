@@ -9,10 +9,10 @@
 		<version>2.2.7.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.prove.kube</groupId>
-	<artifactId>ProvaKube</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>ProvaKube</name>
+	<groupId>com.prova.docker</groupId>
+	<artifactId>ProvaApplication</artifactId>
+	<version>1.0.0</version>
+	<name>ProvaApplication</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -40,10 +40,10 @@
 
 	<build>
 		<plugins>
-			<!-- <plugin> -->
-			<!-- <groupId>org.springframework.boot</groupId> -->
-			<!-- <artifactId>spring-boot-maven-plugin</artifactId> -->
-			<!-- </plugin> -->
+			<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
 			<plugin>
 				<groupId>com.spotify</groupId>
 				<artifactId>dockerfile-maven-plugin</artifactId>
@@ -64,13 +64,6 @@
 					<buildArgs>
 						<JAR_FILE>target/${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
-					<archive>
-			          <manifest>
-			            <addClasspath>true</addClasspath>
-			            <classpathPrefix>lib/</classpathPrefix>
-			            <mainClass>com.prove.kube.ProvaKube.ProvaKubeApplication</mainClass>
-			          </manifest>
-			        </archive>
 				</configuration>
 				<executions>
 					<execution>

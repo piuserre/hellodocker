@@ -1,4 +1,4 @@
-package com.prove.kube.ProvaKube;
+package com.prova.docker;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

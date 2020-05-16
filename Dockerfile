@@ -11,10 +11,10 @@ VOLUME /tmp
 EXPOSE 8089
 
 # The application's jar file
-ARG JAR_FILE=target/ProvaKube-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=target/ProvaApplication-1.0.0.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} ProvaKube.jar
+ADD ${JAR_FILE} ProvaApplication.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/ProvaKube.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/ProvaApplication.jar"]
